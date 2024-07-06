@@ -30,7 +30,7 @@ model=pickle.load(open('model.pkl','rb'))
 
 
 st.header("SMS Spam Prediction.")
-input_data=st.text_area('enter SMS.')
+input_data=st.text_area('Enter SMS.')
 if st.button('Predict'):
     input_data_transform=tfidf.transform([text_transform(input_data)])
     if model.predict(input_data_transform)[0]:
