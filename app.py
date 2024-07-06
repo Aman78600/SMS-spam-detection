@@ -5,6 +5,12 @@ import streamlit as st
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
+def download_nltk_resources():
+    nltk.download('stopwords')
+    nltk.download('punkt')  # PorterStemmer may also require this
+
+# Download NLTK resources
+download_nltk_resources()
 # text preprocessing
 sw=stopwords.words('english')
 puntuation=string.punctuation
