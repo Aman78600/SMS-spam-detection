@@ -34,6 +34,7 @@ input_data=st.text_area('Enter SMS.')
 if st.button('Predict'):
     input_data_transform=tfidf.transform([text_transform(input_data)])
     if model.predict(input_data_transform)[0]:
-        st.write('SPAM')
+        st.markdown('<b style="color:red;">Spam Massage.</b>', unsafe_allow_html=True)
     else:
-        st.write('NOT SPAM')
+        st.markdown('<b style="color:green;">NOT Spam Massage.</b>', unsafe_allow_html=True)
+     
