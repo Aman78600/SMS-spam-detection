@@ -42,7 +42,7 @@ def add_bg_from_local(image_file):
     """,
     unsafe_allow_html=True
     )
-add_bg_from_local('SMS_img.jpeg')  
+add_bg_from_local('SMS_img.jpg')  
 
 st.header("SMS Spam Prediction.")
 input_data=st.text_area('Enter SMS.')
