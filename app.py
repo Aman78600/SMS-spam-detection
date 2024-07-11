@@ -28,19 +28,15 @@ def text_transform(text):
 tfidf=pickle.load(open('transformar.pkl','rb'))
 model=pickle.load(open('model.pkl','rb'))
 
-def add_bg_from_local():
-    st.markdown(
-    f"""
-    <style>
-    .stApp {{
+st.markdown(
+f"""
+<style>
+    .stApp{{
         background-image: url('SMS_img.jpeg');
         background-size: cover
     }}
     </style>
-    """,
-    unsafe_allow_html=True
-    )
-add_bg_from_local()  
+    """, unsafe_allow_html=True)
 
 st.header("SMS Spam Prediction.")
 input_data=st.text_area('Enter SMS.')
